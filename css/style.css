@@ -6,3 +6,10 @@ body{
 tr:hover{
     background-color: blueviolet;
 }
+
+/* estilo por estiqueta */
+#nombre{
+    border: 1px double red;
+    border-radius: 3px;
+    background-color: greenyellow;
+}
