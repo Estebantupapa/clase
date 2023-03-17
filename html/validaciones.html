@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDACIONES</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a href="../index.html">VOLVER AL INICIO</a>
+    <h1>BIENVENIDO AL FORMULARIO CON VALIDACIONES</h1>
+    <fieldset>
+        <form  name="formulario" method="post" action="/send.php">
+            <label for="">NOMBRE COMPLETO</label>
+            <input type="text" name="Nombre" minlength="5" maxlength="50" placeholder="Juan Perez..." size="25px" autocomplete="on" required pattern="[A-Za-z0-9]+ title="Letras y números. Tamaño mínimo: 5. Tamaño máximo: 40">
+        </form>
+        <br>
+        <form action="">
+            <label for="">EMAIL</label>
+            <input type="email" name="Email" placeholder="username@hotmail.com" size="45px" autocomplete="on" required>
+        </form>
+        <br>
+        <form action="">
+            <label for="">CONTRASEÑA</label>
+            <input type="password" name="pass" size="20px" autocomplete="off" required> 
+        </form>
+        <br>
+        <form action="">
+            <label for="">FECHA</label>
+            <input type="date"  name="fecha" min="2000-03-25" max="2023-03-31" step="1" required>
+        </form>
+    </fieldset>
+</body>
+</html>
