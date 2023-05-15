@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cambiar_fondo{
+            background-color: beige;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #000;
+            text-transform: uppercase;
+        }
+        #cambiar_fondo:hover{
+            background-color: aquamarine;
+            transition: all ease-in 0.6s;
+            box-shadow: 0 0 10px gray;
+        }
+    </style>
+</head>
+<body id="contenedor">
+    <input type="text" id="Variable">
+    <button onclick="funcion()" id="evento" >CALCULAR</button>
+    <h1 id="titulo"></h1>
+    <span id="cambiar_fondo">CAMBIAR FONDO</span>
+    <!-- ARCHIVOS JAVASCRIPT -->
+    <script>
+        //VARIABLES
+        const nameuno = "Cualquier cosa";
+        var name_dos = "Cualquier cosa";
+        let nameTres = "Cualquier cosa";
+
+        //TIPOS DE DATOS
+
+        let num_a = 5; //Numero entero
+        let num_b = 10.2; //Numero decimal
+        let boolean = false; // o true
+        let stringvar = "Hola soy un String";
+        let arraynum = [1,2,3,4,5];
+        let dias_Semana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"];
+        let users = [
+            {name:"Esteban", last_name:"Perez", age:20},
+            {name:"Alejandro", last_name:"Coronel", age:21},
+            {name:"Victoria", last_name:"Navarro", age:22}
+        ]
+
+        //OPERACIONES MATEMATICAS: + - * / % ^
+        let suma = num_a + num_b;
+        let resta = num_a - num_b;
+        let multi = num_a * num_b;
+        let divi = num_a / num_b;
+        let module = num_a % num_b;
+        let expo = num_a ^ num_b;
+        console.log("Suma" + suma + "\nResta: " +resta+ "\nMulti");
+        let concatenar = "Suma: ".concat(suma);
+        console.log(concatenar);
+
+        //OPERADORES DE COMPARACION: < / > / <> / >= / <= / = / == / ===
+        //OPERADORES LOGICOS: Ternario / and && / or || / Negacion, diferente, contrario (!)
+        let varboo = true;
+        console.log(!varboo);
+
+        //ESTRUCTURAS REPETITIVAS: IF / ELSE / ELSE IF
+        //ESTRUCTURAS CICLICAS: FOR / WHILE / DO WHILE
+        let long = arraynum.length;
+        if(long > 7){
+            console.log(arraynum);
+            console.log(arraynum.length);
+            console.log(users[0].name);
+        }
+        for(let i=0 ; i<dias_Semana.length; i++){
+            console.log(dias_Semana[i]);
+        }
+
+        while(varname<users.length){
+            console.log(users[varname].name);
+            varname++;
+        }
+        //FUNCIONES Y EVENTOS
+        function funcion(){
+            let variable = document.getElementById('variable').value;
+            variable = variable.toUpperCase();
+            document.getElementById("titulo").innerText = variable;
+            document.getElementById('titulo').style.background="#00ffff";
+            console.log(variable);
+        }
+
+        document.getElementById("evento").addEventListener("click", function(){
+         let variable = document.getElementById('variable').value;
+         document.getElementById('variable').style.background="red";
+         console.log(variable);
+        })
+
+        document.getElementById("cambiar_fondo").addEventListener("dblclick", function(){
+        document.getElementById('contenedor').style.background="red";
+        })
+
+
+
+    </script>
+</body>
+</html>
